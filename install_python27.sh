@@ -18,7 +18,7 @@ usescriptio="true"
 dest="/opt"
 
 ## This variable specifies if extras need to be installed
-install_extras="true"
+install_extras="false"
 
 ## The following fallback variables are only used if script.io is disabled and/or unreachable
 fallback_vers="2.7.8"
