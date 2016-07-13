@@ -102,7 +102,8 @@ python_install() {
   cd Python-$python2vers &&
   ./configure --prefix=${dest}/python$python2vers --with-threads --enable-shared --enable-unicode=ucs4
   make
-  make install
+  # @see http://stackoverflow.com/a/11196864/3367365
+  make altinstall
 
   if [ -f /etc/ld.so.conf.d/opt-python$python2vers.conf ]; then
     rm -f /etc/ld.so.conf.d/opt-python$python2vers.conf
